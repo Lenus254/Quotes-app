@@ -5,7 +5,7 @@
         <div class="col-md-6">
     <app-form  (addquote)="addNewQuote($event)"></app-form>
 </div>
-<div class="col-md-6 section" *ngFor="let quote of quote">
+<div class="col-md-6 section" *ngFor="let quote of quote,let i=index">
     <p>My Name:{{quote.name}}</p>
     <p>Author:{{quote.author}}</p>
     <p>Qoute:{{quote.quote}}</p>
@@ -15,7 +15,7 @@
     
         <app-downvote id="vbuttons"></app-downvote>
 
-        <app-delete2 id="vbuttons"></app-delete2>
+        <app-delete2 id="vbuttons" (Delete)="quoteDelete($event,i)"></app-delete2>
         
     
 </div>

@@ -5,11 +5,11 @@
         <div class="col-md-6">
     <app-form></app-form>
 </div>
-<div class="col-md-6 section">
-    <p>My Name</p>
-    <p>Author</p>
-    <p>Qoute</p>
-    <p>Posted On</p>
+<div class="col-md-6 section" *ngFor="let quote of quote">
+    <p>My Name:{{quote.name}}</p>
+    <p>Author:{{quote.author}}</p>
+    <p>Qoute:{{quote.quote}}</p>
+    <p>Posted On:{{quote.dateposted|date}}</p>
     <div >
         <button id="vbuttons" class="btn btn-success"><i class="fa fa-thumbs-up"></i>Upvote</button>
         <button id="vbuttons" class="btn btn-success"><i class="fa fa-thumbs-down"></i>downvote</button>

@@ -3,18 +3,21 @@
     <h1>MY Quotes</h1>
     <div class="row">
         <div class="col-md-6">
-    <app-form></app-form>
+    <app-form  (addquote)="addNewQuote($event)"></app-form>
 </div>
 <div class="col-md-6 section" *ngFor="let quote of quote">
     <p>My Name:{{quote.name}}</p>
     <p>Author:{{quote.author}}</p>
     <p>Qoute:{{quote.quote}}</p>
     <p>Posted On:{{quote.dateposted|date}}</p>
-    <div >
-        <button id="vbuttons" class="btn btn-success"><i class="fa fa-thumbs-up"></i>Upvote</button>
-        <button id="vbuttons" class="btn btn-success"><i class="fa fa-thumbs-down"></i>downvote</button>
-        <button id="vbuttons" class="btn btn-danger"><i class="fa fa-trash"></i>Delete</button>
-    </div>
+
+        <app-upvote id="vbuttons"></app-upvote>
+    
+        <app-downvote id="vbuttons"></app-downvote>
+
+        <app-delete2 id="vbuttons"></app-delete2>
+        
+    
 </div>
 
 </div>

@@ -9,6 +9,11 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
 
   quote:Quote[]=[new Quote("linus","owner","No education is better than half education",new Date())]
+  addNewQuote(q:any){
+    q.dateposted=new Date(q.dateposted)
+    this.quote.push(q)
+    
+  }
 
   constructor() { }
 

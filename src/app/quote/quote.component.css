@@ -1,3 +1,7 @@
 #vbuttons{
     margin: 20px;
 }
+.section{
+    background-color: lightblue;
+    overflow: scroll;
+}

@@ -1,23 +1,34 @@
 <div class="row">
     <div class="col-md-6">
-        <form action="">
+        <form Form="ngForm">
             <p>form</p>
             <div class="form-group">
                 <label for="Name">Name</label>
-                <input type="text" class="form-control" name="name" id="" placeholder="Your Name">
+                <input type="text" class="form-control" name="name" id="" [(ngModel)]="newquote.name" placeholder="Your Name" #name='ngModel' required>
+                <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                    <p>Name is required</p>
+                  </div>
             </div>
+            {{newquote.name}}
             <div class="form-group">
                 <label for="Author">author</label>
-                <input type="text" class="form-control" name="Author" id="" placeholder="Author">
+                <input type="text" class="form-control" name="Author" id="" [(ngModel)]="newquote.author" placeholder="Author" #author='ngModel' required>
+                <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+                    <p>Author is required</p>
+                  </div>
             </div>
             <div class="form-group">
                 <label for="Quote">Quote</label><br>
-                <textarea name="quote" id="" cols="47" rows="6" placeholder="type your quote..."></textarea>
+                <textarea name="quote" id="" [(ngModel)]="newquote.quote" cols="47" rows="6" placeholder="type your quote..." #quote='ngModel' required></textarea>
+                <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
+                    <p>Quote is required</p>
+                  </div>
             </div>
             <div class="form-group">
                 <label for="Posted On">Posted On</label>
-                <input type="date" class="form-control" name="date" id="" placeholder="Date Posted">
+                <input type="date" class="form-control" name="date" id="" [(ngModel)]="newquote.dateposted" placeholder="Date Posted">
             </div><br>
+            {{newquote.dateposted}}
             <div class="form-group">
                 <button class="btn btn-primary">Post Quote</button>
             </div>

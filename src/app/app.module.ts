@@ -9,6 +9,7 @@ import { QuoteComponent } from './quote/quote.component';
 import { UpvoteComponent } from './upvote/upvote.component';
 import { DownvoteComponent } from './downvote/downvote.component';
 import { Delete2Component } from './delete2/delete2.component';
+import { DateCountPipe } from './date-count.pipe';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { Delete2Component } from './delete2/delete2.component';
     UpvoteComponent,
     DownvoteComponent,
     Delete2Component,
+    DateCountPipe,
     
     
   ],

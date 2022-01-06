@@ -10,6 +10,7 @@
     <p>Author:{{quote.author}}</p>
     <p>Qoute:{{quote.quote}}</p>
     <p>Posted On:{{quote.dateposted|date}}</p>
+    <p>posted {{quote.dateposted|dateCount|number:'1.0-0'}} days ago</p>
 
         <app-upvote id="vbuttons"></app-upvote>
     

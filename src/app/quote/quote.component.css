@@ -1,7 +1,20 @@
 #vbuttons{
-    margin: 20px;
+    margin: 2px;
 }
-.section{
+.section{ 
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 48%;
+    float: left;
+    padding: 20px;
     background-color: lightblue;
-    overflow: scroll;
+    border-radius: 20px;
+    /* overflow: scroll; */
+    /* height: 500px; */
+    
+}
+.myform{
+    /* float: left; */
+     /* width: 40%;  */
+    
 }

@@ -1,27 +1,25 @@
+
 <div class="container">
-    
-    <h1>MY Quotes</h1>
-    <div class="row">
-        <div class="col-md-6">
-    <app-form  (addquote)="addNewQuote($event)"></app-form>
-</div>
-<div class="col-md-6 section" *ngFor="let quote of quote,let i=index">
-    <p appQuoteHighlight>My Name:{{quote.name}}</p>
-    <!-- <app-quote-details></app-quote-details> -->
-    <!-- <p>Author:{{quote.author}}</p>
-    <p>Qoute:{{quote.quote}}</p>
-    <p>Posted On:{{quote.dateposted|date}}</p>
-    <p>posted {{quote.dateposted|dateCount|number:'1.0-0'}} days ago</p> -->
-    
-
-        <app-upvote id="vbuttons"></app-upvote>
-    
-        <app-downvote id="vbuttons"></app-downvote>
-
-        <app-delete2 id="vbuttons" (Delete)="quoteDelete($event,i)"></app-delete2>
+    <!-- <h1 class="text-center">MY Quotes</h1> -->
+    <div class="rows">
+        <div class="cols-md-4 myform">
+            <app-form  (addquote)="addNewQuote($event)"></app-form>
+        </div>
+        <div class="cols-md-8 section"  *ngFor="let quote of quote;let i=index">
+            
+            <p appQuoteHighlight *ngIf="quote.countupvotenumber===total && quote.countupvotenumber>0">My Name:{{quote.name}}</p>
+            <button (click)="toggleDetails(i)">Quote Details</button><br><br>
+            <app-quote-datails [quote]="quote"  *ngIf='quote.showQuoteDetails'></app-quote-datails>
+            
+           
         
-    
+                <!-- <app-upvote id="vbuttons"></app-upvote> -->
+                <button  class="btn btn-success" (click)="upvotecount(i)"><i class="fa fa-thumbs-up"></i>Upvote{{quote.countupvotenumber}}</button>
+            
+                <app-downvote id="vbuttons"></app-downvote>
+        
+                <app-delete2 id="vbuttons" (Delete)="quoteDelete($event,i)"></app-delete2>
+                
+        </div>
+    </div>
 </div>
-
-</div>
-  </div>

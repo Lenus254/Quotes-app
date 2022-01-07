@@ -11,8 +11,10 @@ export class FormComponent implements OnInit {
   newquote=new Quote("","","",new Date())
   @Output() addquote = new EventEmitter<Quote>();
 
-  postquote(){
-    this.addquote.emit(this.newquote);
+  postquote(form:any){
+    let myformdetails= new Quote(form.value.name,form.value.author,form.value.quote,form.value.dateposted)
+    this.addquote.emit(myformdetails);
+    form.reset()
   }
   constructor() { }
 

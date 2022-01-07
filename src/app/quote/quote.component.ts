@@ -8,7 +8,7 @@ import { Quote } from '../quote';
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
-
+total:number=0
   quote:Quote[]=[new Quote("linus","owner","No education is better than half education",new Date())]
   addNewQuote(q:any){
     q.dateposted=new Date(q.dateposted)
@@ -17,7 +17,15 @@ export class QuoteComponent implements OnInit {
     
     
   }
-
+  toggleDetails(index:number){
+    this.quote[index].showQuoteDetails = !this.quote[index].showQuoteDetails;
+  }
+  upvotecount(i:number){
+    this.quote[i].countupvotenumber= this.quote[i].countupvotenumber+1
+    if(this.quote[i].countupvotenumber>this.total){
+      this.total=this.quote[i].countupvotenumber
+    }
+  }
   constructor() { }
 
   ngOnInit(): void {

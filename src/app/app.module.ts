@@ -10,6 +10,8 @@ import { UpvoteComponent } from './upvote/upvote.component';
 import { DownvoteComponent } from './downvote/downvote.component';
 import { Delete2Component } from './delete2/delete2.component';
 import { DateCountPipe } from './date-count.pipe';
+import { QuoteDatailsComponent } from './quote-datails/quote-datails.component';
+import { QuoteHighlightDirective } from './quote-highlight.directive';
 
 @NgModule({
   declarations: [
@@ -20,13 +22,16 @@ import { DateCountPipe } from './date-count.pipe';
     DownvoteComponent,
     Delete2Component,
     DateCountPipe,
+    QuoteDatailsComponent,
+    QuoteHighlightDirective,
     
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    
     
   ],
   providers: [],

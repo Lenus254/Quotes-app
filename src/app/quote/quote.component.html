@@ -6,11 +6,13 @@
     <app-form  (addquote)="addNewQuote($event)"></app-form>
 </div>
 <div class="col-md-6 section" *ngFor="let quote of quote,let i=index">
-    <p>My Name:{{quote.name}}</p>
-    <p>Author:{{quote.author}}</p>
+    <p appQuoteHighlight>My Name:{{quote.name}}</p>
+    <!-- <app-quote-details></app-quote-details> -->
+    <!-- <p>Author:{{quote.author}}</p>
     <p>Qoute:{{quote.quote}}</p>
     <p>Posted On:{{quote.dateposted|date}}</p>
-    <p>posted {{quote.dateposted|dateCount|number:'1.0-0'}} days ago</p>
+    <p>posted {{quote.dateposted|dateCount|number:'1.0-0'}} days ago</p> -->
+    
 
         <app-upvote id="vbuttons"></app-upvote>
     

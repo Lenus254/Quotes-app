@@ -1,4 +1,16 @@
-# Quote
+# Quote app
+
+## Author
+
+[lenus254](https://github.com/Lenus254)
+
+## Description
+
+This is agular cli application that displays quotes, allow the user to input new quote, upvote , downvote and delete the quote. 
+
+## Live Page 
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.1.
 
@@ -25,3 +37,32 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Installation / Setup instructions
+* Open Terminal {Ctrl+Alt+T}
+
+* git clone https://github.com/Lenus254/Quotes-app
+
+* cd Quotes-app
+
+* code . or atom . based on the text editor you have.
+
+## Technologies Used
+
+* [HTML5](https://github.com/topics/html5)
+* [CSS](https://github.com/topics/css3)
+* [AngulerCLI]
+* markdown
+* [Bootstrap](https://github.com/topics/bootstrap)
+
+## Known Bugs
+* When the page is refreshed added quotes dissappear
+
+## Contact Information 
+
+If you have any question or contributions, please email me at [lenuslangat@gmail.com]
+
+## License
+* *MIT License:*
+* Copyright (c) 2019 **Linus langat**
+

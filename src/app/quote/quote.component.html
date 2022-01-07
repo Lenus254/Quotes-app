@@ -1,8 +1,9 @@
 
 <div class="container">
-    <!-- <h1 class="text-center">MY Quotes</h1> -->
+    <h1 class="text-center" id="heading">MY Quotes</h1>
+    <h2 class="text-center" id="heading">Welcome to Quote factory</h2>
     <div class="rows">
-        <div class="cols-md-4 myform">
+        <div class="myform">
             <app-form  (addquote)="addNewQuote($event)"></app-form>
         </div>
         <div class="cols-md-8 section"  *ngFor="let quote of quote;let i=index">

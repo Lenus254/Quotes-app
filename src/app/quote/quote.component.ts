@@ -9,7 +9,8 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
 total:number=0
-  quote:Quote[]=[new Quote("linus","owner","No education is better than half education",new Date())]
+  quote:Quote[]=[new Quote("linus","owner","No education is better than half education",new Date()),
+                 new Quote("Martin","Amy Poehler","Change the world by being yourself.",new Date())]
   addNewQuote(q:any){
     q.dateposted=new Date(q.dateposted)
     this.quote.push(q)
@@ -21,7 +22,7 @@ total:number=0
     this.quote[index].showQuoteDetails = !this.quote[index].showQuoteDetails;
   }
   upvotecount(i:number){
-    this.quote[1].countupvotenumber= this.quote[i].countupvotenumber+1
+    this.quote[i].countupvotenumber= this.quote[i].countupvotenumber+1
     if(this.quote[i].countupvotenumber>this.total){
       this.total=this.quote[i].countupvotenumber
     }

@@ -21,7 +21,7 @@ total:number=0
     this.quote[index].showQuoteDetails = !this.quote[index].showQuoteDetails;
   }
   upvotecount(i:number){
-    this.quote[].countupvotenumber= this.quote[i].countupvotenumber+1
+    this.quote[1].countupvotenumber= this.quote[i].countupvotenumber+1
     if(this.quote[i].countupvotenumber>this.total){
       this.total=this.quote[i].countupvotenumber
     }
